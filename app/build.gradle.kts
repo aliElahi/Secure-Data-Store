@@ -53,5 +53,5 @@ dependencies {
 
     //implementation(project(":securedatastore"))
 
-    //mplementation ("com.github.aliElahi:Secure-Data-Store:1.0.2")
+    //implementation ("com.github.aliElahi:Secure-Data-Store:1.0.4")
 }
