@@ -40,8 +40,6 @@ class MainActivity : AppCompatActivity() {
         //com.alielahi.securedatastore.storeData.SecureDataStoreManager.
 
 
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
