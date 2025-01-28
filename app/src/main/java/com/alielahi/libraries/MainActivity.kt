@@ -33,6 +33,15 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null)
                 .setAnchorView(R.id.fab).show()
         }
+
+        //com.alielahi.securedatastore.storeData.SecureDataStoreManager.getSecureDataStore(context = this)
+        //com.alielahi.libraries.
+
+        //com.alielahi.securedatastore.storeData.SecureDataStoreManager.
+
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

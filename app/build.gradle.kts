@@ -49,4 +49,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    //implementation(project(":securedatastore"))
+
+    implementation ("com.github.aliElahi:Secure-Data-Store:1.0.1")
 }

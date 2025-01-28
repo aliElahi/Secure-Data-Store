@@ -33,6 +33,12 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    publishing {
+        singleVariant("release") {
+            
+        }
+    }
 }
 
 dependencies {
@@ -55,11 +61,11 @@ afterEvaluate {
             create<MavenPublication>("release") {
 
                 //from(components.maybeCreate("release"))
-                //from(components["release"])
+                from(components["release"])
 
                 groupId = "com.alielahi"
                 artifactId = "securedatastore"
-                version = "1.0.0"
+                version = "1.0.2"
 
             }
         }
