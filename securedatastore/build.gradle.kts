@@ -47,6 +47,25 @@ android {
         }
     }
 
+    afterEvaluate {
+        publishing {
+
+            publications {
+
+                create<MavenPublication>("release") {
+
+                    //from(components.maybeCreate("release"))
+                    //from(components["release"])
+
+                    groupId = "com.alielahi"
+                    artifactId = "securedatastore"
+                    version = "1.0.10"
+
+                }
+            }
+        }
+    }
+
 }
 
 dependencies {
@@ -61,21 +80,3 @@ dependencies {
     implementation(libs.androidx.datastore.preferences)
 }
 
-afterEvaluate {
-    publishing {
-
-        publications {
-
-            create<MavenPublication>("release") {
-
-                //from(components.maybeCreate("release"))
-                //from(components["release"])
-
-                groupId = "com.alielahi"
-                artifactId = "securedatastore"
-                version = "1.0.9"
-
-            }
-        }
-    }
-}
