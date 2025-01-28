@@ -65,7 +65,7 @@ afterEvaluate {
 
                 groupId = "com.alielahi"
                 artifactId = "securedatastore"
-                version = "1.0.5"
+                version = "1.0.6"
 
             }
         }

@@ -51,7 +51,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
 
-    //implementation(project(":securedatastore"))
+    implementation(project(":securedatastore"))
 
-    //implementation ("com.github.aliElahi:Secure-Data-Store:1.0.4")
+    //implementation ("com.github.aliElahi:Secure-Data-Store:1.0.5")
 }
