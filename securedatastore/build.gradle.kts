@@ -22,11 +22,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {
@@ -51,18 +48,20 @@ dependencies {
 }
 
 afterEvaluate {
-
     publishing {
+
         publications {
 
-            val release = getByName("release").apply {
+            create<MavenPublication>("release") {
 
+                //from(components.maybeCreate("release"))
+                //from(components["release"])
 
+                groupId = "com.alielahi"
+                artifactId = "securedatastore"
+                version = "1.0.0"
 
             }
-
-
-
         }
     }
 }
