@@ -39,6 +39,14 @@ android {
             //withSourcesJar()
         }
     }
+
+
+    packaging{
+        resources{
+            excludes.add("/META-INF/DEPENDENCIES")
+        }
+    }
+    
 }
 
 dependencies {
