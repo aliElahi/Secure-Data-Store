@@ -46,7 +46,7 @@ android {
             excludes.add("/META-INF/DEPENDENCIES")
         }
     }
-    
+
 }
 
 dependencies {
@@ -73,7 +73,7 @@ afterEvaluate {
 
                 groupId = "com.alielahi"
                 artifactId = "securedatastore"
-                version = "1.0.7"
+                version = "1.0.9"
 
             }
         }
