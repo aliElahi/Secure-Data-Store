@@ -36,7 +36,7 @@ android {
 
     publishing {
         singleVariant("release") {
-            withSourcesJar()
+            //withSourcesJar()
         }
     }
 }
@@ -61,11 +61,11 @@ afterEvaluate {
             create<MavenPublication>("release") {
 
                 //from(components.maybeCreate("release"))
-                from(components["release"])
+                //from(components["release"])
 
                 groupId = "com.alielahi"
                 artifactId = "securedatastore"
-                version = "1.0.6"
+                version = "1.0.7"
 
             }
         }
