@@ -5,7 +5,7 @@ import java.security.KeyStore
 object KeyStoreManager
 {
 
-    fun getKeyStoreInstance(): KeyStore = KeyStore.getInstance(keyStoreName).apply {
+    fun getKeyStoreInstance(): KeyStore = KeyStore.getInstance(KEY_STORE_NAME).apply {
         load(null)
     }
 
@@ -14,5 +14,5 @@ object KeyStoreManager
         return ks.isKeyEntry(alias)
     }
 
-    private const val keyStoreName = "AndroidKeyStore"
+    private const val KEY_STORE_NAME = "AndroidKeyStore"
 }

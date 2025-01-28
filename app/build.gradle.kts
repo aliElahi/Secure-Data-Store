@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.alielahi.libraries"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.alielahi.libraries"

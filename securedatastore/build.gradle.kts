@@ -1,11 +1,14 @@
+import org.gradle.internal.util.Trie.from
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
 android {
     namespace = "com.alielahi.securedatastore"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.alielahi.securedatastore"
@@ -45,4 +48,21 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.androidx.datastore.preferences)
+}
+
+afterEvaluate {
+
+    publishing {
+        publications {
+
+            val release = getByName("release").apply {
+
+
+
+            }
+
+
+
+        }
+    }
 }
