@@ -61,21 +61,19 @@ dependencies {
 }
 
 
-afterEvaluate {
-    publishing {
+publishing {
 
-        publications {
+    publications {
 
-            create<MavenPublication>("release") {
+        create<MavenPublication>("release") {
 
-                //from(components.maybeCreate("release"))
-                //from(components["release"])
+            //from(components.maybeCreate("release"))
+            //from(components["release"])
 
-                groupId = "com.alielahi"
-                artifactId = "securedatastore"
-                version = "1.0.11"
+            groupId = "com.alielahi"
+            artifactId = "securedatastore"
+            version = "1.0.11"
 
-            }
         }
     }
 }
