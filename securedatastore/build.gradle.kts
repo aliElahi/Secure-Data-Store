@@ -10,6 +10,7 @@ android {
 
     defaultConfig {
         //applicationId = "com.alielahi.securedatastore"
+        resourcePrefix("secure_data_store")
         minSdk = 23
         targetSdk = 34
         //versionCode = 1
@@ -20,7 +21,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -67,7 +68,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
 
                 //from(components.maybeCreate("release"))
-                //from(components["release"])
+                from(components["release"])
 
                 groupId = "com.alielahi"
                 artifactId = "securedatastore"
