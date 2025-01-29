@@ -1,7 +1,5 @@
-import org.gradle.internal.util.Trie.from
-
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.library")
     alias(libs.plugins.kotlin.android)
     id("maven-publish")
 }
@@ -11,11 +9,11 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.alielahi.securedatastore"
+        //applicationId = "com.alielahi.securedatastore"
         minSdk = 23
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        //versionCode = 1
+        //versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -61,19 +59,21 @@ dependencies {
 }
 
 
-publishing {
+afterEvaluate {
+    publishing {
 
-    publications {
+        publications {
 
-        create<MavenPublication>("release") {
+            create<MavenPublication>("release") {
 
-            //from(components.maybeCreate("release"))
-            //from(components["release"])
+                //from(components.maybeCreate("release"))
+                //from(components["release"])
 
-            groupId = "com.alielahi"
-            artifactId = "securedatastore"
-            version = "1.0.11"
+                groupId = "com.alielahi"
+                artifactId = "securedatastore"
+                version = "1.0.11"
 
+            }
         }
     }
 }
